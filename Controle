@@ -1,0 +1,19 @@
+
+package aula06;
+
+
+public class Aula06 {
+
+   
+    public static void main(String[] args) {
+     ControleRemoto c = new ControleRemoto();
+     c.ligar();
+     c.pause();
+     c.maisvolume();
+     c.abrirmenu();
+     c.fecharmenu();
+     c.desligar();
+     c.play();
+     c.desligar();
+    }    
+}
