@@ -23,20 +23,30 @@ public class Exerc03_Geometria {
     //////////////////////////////////////////////
     
     public static void main(String[] args) {
-        TrianguloRetangulo tr1 = new TrianguloRetangulo();
+        /*Andre Lucas- Tive que colocar o parametrizado como primeiro para
+        poder resolver o problema de linhas da hora do resultado inválido*/
+        TrianguloRetangulo tr1 = new TrianguloRetangulo(0.0,-1.2,3.0,9.9);
+        tr1.calcArea();
+        tr1.calcPerimetro();
+        System.out.println("==========================================");
         
-        tr1.setCateto1(14.5);
-        tr1.setCateto2(48.1);
-        tr1.setHipotenusa(51.2);
-        tr1.setAlturaHipotenusa(12.3);
         
-        double areaTr1 = tr1.calcArea();
-        System.out.println("Área do triângulo tr1: " + areaTr1);
         
-        double perimetroTr1 = tr1.calcPerimetro();
-        System.out.println("Perímetro do triângulo tr1: " + perimetroTr1);
+        TrianguloRetangulo tr2 = new TrianguloRetangulo();
+        
+        tr2.setCateto1(14.5);
+        tr2.setCateto2(48.1);
+        tr2.setHipotenusa(51.2);
+        tr2.setAlturaHipotenusa(12.3);
+        
+        //Calcular e mostrar a area
+        tr2.calcArea();
+        
+        //Calcular e mostrar Perimetro
+        tr2.calcPerimetro();
+        
+        System.out.println("==============================================");
 
-        TrianguloRetangulo tr2 = new TrianguloRetangulo(0.0,-1.2,3.0,9.9);
         
         // Done 10 aqui dentro do main, crie um objeto da classe TrianguloEquilatero (nome: te1)
         TrianguloEquilatero te1 = new TrianguloEquilatero();

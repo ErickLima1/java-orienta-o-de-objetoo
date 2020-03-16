@@ -7,14 +7,14 @@ public class TrianguloRetangulo {
     private double hipotenusa;
     private double alturaHipotenusa;
     
-    public double calcArea(){
+    public void calcArea(){
         double area = this.hipotenusa * alturaHipotenusa / 2.0;
-        return area;
+        System.out.println("Área do triângulo: " + area);    
     }
     
-    public double calcPerimetro(){
+    public void calcPerimetro(){
         double perimetro = cateto1 + cateto2 + hipotenusa;
-        return perimetro;
+        System.out.println("Perímetro do triângulo : " + perimetro);
     }
     
    
@@ -28,7 +28,7 @@ public class TrianguloRetangulo {
         if(cateto1 > 0) {
             this.cateto1 = cateto1;
         } else {
-            System.err.println("Erro! Valor inválido de cateto!");
+            System.err.print("Erro! Valor inválido de cateto!");
             System.exit(0); //encerrando a execução do programa
         }
     }
@@ -41,7 +41,7 @@ public class TrianguloRetangulo {
         if(cateto2 > 0) {
             this.cateto2 = cateto2;
         } else {
-            System.err.println("Erro! Valor inválido de cateto!");
+            System.err.print("Erro! Valor inválido de cateto!");
             System.exit(0); //encerrando a execução do programa
         }
     }
@@ -54,7 +54,7 @@ public class TrianguloRetangulo {
         if(hipotenusa > 0) {
             this.hipotenusa = hipotenusa;
         } else {
-            System.err.println("Erro! Valor inválido de hipotenusa!");
+            System.err.print("Erro! Valor inválido de hipotenusa!");
             System.exit(0); //encerrando a execução do programa
         }
         
@@ -68,16 +68,16 @@ public class TrianguloRetangulo {
         if(alturaHipotenusa > 0) {
             this.alturaHipotenusa = alturaHipotenusa;
         } else {
-            System.err.println("Erro! Valor inválido de altura relativa à hipotenusa!");
+            System.err.print("Erro! Valor inválido de altura relativa à hipotenusa!");
             System.exit(0); //encerrando a execução do programa
         }
     }
     
     public TrianguloRetangulo(double cateto1, double cateto2, double hipotenusa, double alturaHipotenusa) {
-        setCateto1(cateto1);
-        setCateto2(cateto2);
-        setHipotenusa(hipotenusa);
-        setAlturaHipotenusa(alturaHipotenusa);
+        this.setCateto1(cateto1);
+        this.setCateto2(cateto2);
+        this.setHipotenusa(hipotenusa);
+        this.setAlturaHipotenusa(alturaHipotenusa);
     }
     
     public TrianguloRetangulo() {

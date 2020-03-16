@@ -32,7 +32,7 @@ public class TrianguloEquilatero {
         if(lado > 0) {
         this.lado = lado;
         }else{
-            System.err.println("Erro,Valor Invalido");
+            System.err.print("Erro,Valor Invalido");
             System.exit(0);
         }
         
@@ -46,7 +46,7 @@ public class TrianguloEquilatero {
         if(altura > 0) {
         this.altura = altura;
         }else{
-            System.err.println("Erro,Invalido");
+            System.err.print("Erro,Invalido");
            System.exit(0);
         }
     }
