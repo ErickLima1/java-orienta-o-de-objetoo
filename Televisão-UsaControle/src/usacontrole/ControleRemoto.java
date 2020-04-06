@@ -1,4 +1,3 @@
-
 package usacontrole;
 
  //@author Erick
@@ -11,28 +10,31 @@ public class ControleRemoto {
    int op;
    Scanner sc = new Scanner(System.in);
    ControleRemoto cont[] = new ControleRemoto[1];
+   
     
    public void status() {
        while(true) {
            menu();
            op = sc.nextInt();
-       
+            if(op==0) 
+            break; 
        switch(op) {
          case 1:
-            cont[0].mudarCanal(1);
+            this.canal++;
             break;
          case 2:
-             cont[0].mudarCanal(0);
+             this.canal--;
             break;
          case 3:
             System.out.println("Insira um Canal");
-              cont[0].mudarCanal(sc.nextInt());
+              mudarCanal(sc.nextInt());
             break;
          case 4:
-             cont[0].mudarVolume(1);
+             this.volume++;
+                     
             break;
          case 5:
-             cont[0].mudarVolume(0);
+             this.volume--;
             break;
          case 6:
              System.out.println("==========================");
